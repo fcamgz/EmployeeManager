@@ -18,10 +18,9 @@ const EmployeeSchema = mongoose.Schema({
                 message: 'Oops please enter a valid email'
             })
         ],
-        required: true
+        required: true,
+        default: 'noEmailAddress@hotmail.com'
     } 
-});
+} ,{timestamps: true});
 
-const Employee = mongoose.model('Employee', EmployeeSchema);
-
-module.exports = Employee;
+module.exports = mongoose.model('Employee', EmployeeSchema);

@@ -28,21 +28,21 @@ const ViewEmployee = () => {
                         </div>
                     <div className='d-flex flex-column align-items-center mt-4 bg-light border border-secondary p-3'>
                         <h4 className='text-secondary'>Employee Id</h4>
-                        <h5> {employeeInfo._id}</h5>
+                        <h5 className='text-break'> {employeeInfo._id}</h5>
                         <br/>
                         <h4 className='text-secondary'>First Name</h4>
-                        <h5>{employeeInfo.firstName}</h5>
+                        <h5 className='text-break'>{employeeInfo.firstName}</h5>
                         <br/>
                         <h4 className='text-secondary'>Last Name</h4>
-                        <h5>{employeeInfo.lastName}</h5>
+                        <h5 className='text-break'>{employeeInfo.lastName}</h5>
                         <br/>
                         <h4 className='text-secondary'>Email</h4>
-                        <h5>{employeeInfo.emailId}</h5>
+                        <h5 className='text-break'>{employeeInfo.emailId}</h5>
                         <br/>
                     </div>
                     <br/>
                     <div className='d-flex justify-content-between'>
-                        <button className='btn btn-success col-4'>Update</button>
+                        <Link className='btn btn-success col-4' to={`/employees/update/${id}`}>Update</Link>
                         <Link to={`/employees/delete/${id}`} className='btn btn-danger col-4'>Delete</Link>
                     </div>
                 </div>
